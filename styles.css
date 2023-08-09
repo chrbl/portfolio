@@ -15,7 +15,7 @@ body {
     flex: 1;
     text-align: center;
     padding: 25px;
-    background-color: white;
+    background-color: black;
 }
 
 .nav-projects {
@@ -34,7 +34,7 @@ body {
 
 .nav-home a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: "Gill Sans", sans-serif;
     font-weight: bold;
     font-size: 24px;
@@ -54,14 +54,6 @@ body {
     font-family: "Gill Sans", sans-serif;
     font-weight: bold;
     font-size: 24px;
-}
-
-.nav-home:hover {
-    background-color: black;
-}
-
-.nav-home:hover a {
-    color: white;
 }
 
 .nav-projects:hover {
