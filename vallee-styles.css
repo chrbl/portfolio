@@ -1,0 +1,186 @@
+body {
+    margin: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    font-family: Iowan Old Style;
+    font-size: 18px;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 15px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+.body-text {
+    color: black;
+}
+
+.keywords {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.keyword {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+    margin-block: 5px;
+    font-family: Gill Sans;
+    font-weight: Bold;
+    text-transform: uppercase;
+
+}
+
+.navbar {
+    display: flex;
+    margin-bottom: 50px
+}
+
+.nav-home {
+    flex: 1;
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+}
+
+.nav-projects {
+    flex: 1;
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+}
+
+.nav-title {
+    flex: 1;
+    text-align: center;
+    padding: 25px;
+    background-color: black;
+}
+
+.nav-home a {
+    text-decoration: none;
+    color: black;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-projects a {
+    text-decoration: none;
+    color: black;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-title a {
+    text-decoration: none;
+    color: white;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-home:hover {
+    background-color: black;
+}
+
+.nav-home:hover a {
+    color: white;
+}
+
+.nav-projects:hover {
+    background-color: black;
+}
+
+.nav-projects:hover a {
+    color: white;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-inner {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.image-carousel {
+    flex: 2.06;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.image-carousel img {
+    max-width: 100%;
+    height: auto;
+    padding-block-end: 10px;
+}
+
+@media (max-width: 1080px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-home,
+    .nav-projects,
+    .nav-title {
+        flex: none;
+        text-align: center;
+        padding: 15px;
+        width: 94.5%;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        display: none;
+    }
+
+    .image-carousel {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .image-carousel img {
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .carousel-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .text-content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .image-carousel::-webkit-scrollbar {
+        display: none;
+    }
+}

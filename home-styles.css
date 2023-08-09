@@ -1,0 +1,126 @@
+body {
+  margin: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    margin-bottom: 50px
+}
+
+.nav-home {
+    flex: 1;
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+}
+
+.nav-projects {
+    flex: 1;
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+}
+
+.nav-title {
+    flex: 1;
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+}
+
+.nav-home a {
+    text-decoration: none;
+    color: black;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-projects a {
+    text-decoration: none;
+    color: black;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-title a {
+    text-decoration: none;
+    color: white;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-home:hover {
+    background-color: black;
+}
+
+.nav-home:hover a {
+    color: white;
+}
+
+.nav-projects:hover {
+    background-color: black;
+}
+
+.nav-projects:hover a {
+    color: white;
+}
+
+.content {
+    text-align: left;
+    background-color: white;
+    color: black;
+}
+
+.body-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-right: 66.6%;
+}
+
+.link:hover {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 1080px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-home,
+    .nav-projects,
+    .nav-title {
+        flex: none;
+        text-align: center;
+        padding: 15px;
+        width: 94.5%;
+    }
+    
+    .link {
+        margin-right: 0;
+    }
