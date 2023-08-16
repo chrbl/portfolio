@@ -1,3 +1,10 @@
+/* Global Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
 body {
     margin: 10px;
     margin-top: 10px;
@@ -5,20 +12,22 @@ body {
     height: 100vh;
     background-color: white;
     color: black;
-    font-family: Iowan Old Style;
+    font-family: "Iowan Old Style", sans-serif;
     font-size: 18px;
 }
 
+/* Fonts */
 @font-face {
-  font-family: 'Gill Sans';
-  src: url('/fonts/GillSans.ttc') format('ttc'),
+    font-family: 'Gill Sans';
+    src: url('/fonts/GillSans.ttc') format('ttc');
 }
 
 @font-face {
-  font-family: 'Iowan Old Style';
-  src: url('/fonts/IowanOldStyle.ttc') format('ttc'),
+    font-family: 'Iowan Old Style';
+    src: url('/fonts/IowanOldStyle.ttc') format('ttc');
 }
 
+/* Footer */
 .text-footer {
     font-size: 12px;
     font-weight: bold;
@@ -26,6 +35,18 @@ body {
     margin-bottom: -10px;
 }
 
+.copyright {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.copyright p {
+    margin: 5px;
+}
+
+/* Navigation Bar */
 .navbar {
     display: flex;
     margin-bottom: 50px;
@@ -54,51 +75,29 @@ body {
     text-align: center;
     padding: 25.5px;
     background-color: black;
+    color: white;
 }
 
-.nav-home a {
-    text-decoration: none;
-    color: black;
-    font-family: "Gill Sans", sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.nav-projects a {
-    text-decoration: none;
-    color: black;
-    font-family: "Gill Sans", sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-}
-
+.nav-home a,
+.nav-projects a,
 .nav-title a {
     text-decoration: none;
-    color: white;
     font-family: "Gill Sans", sans-serif;
     font-weight: bold;
     font-size: 24px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-home:hover {
-    background-color: black;
-}
-
-.nav-home:hover a {
-    color: white;
-}
-
+.nav-home:hover,
 .nav-projects:hover {
     background-color: black;
-}
-
-.nav-projects:hover a {
     color: white;
 }
 
+/* Content Container */
 .container {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .text-column {
@@ -135,15 +134,33 @@ body {
 }
 
 .image-column {
-  flex: 2.18;
-  overflow: auto;
-  box-sizing: border-box;
+    flex: 2.18;
+    overflow: auto;
+    box-sizing: border-box;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
 }
 
+/* Media query for viewport widths below 1080px */
+@media screen and (max-width: 1080px) {
+    /* Prevent resizing of navigation bar */
+    .navbar {
+        min-width: 960px; /* Set a minimum width for the navigation bar */
+    }
+    
+    .nav-home,
+    .nav-projects,
+    .nav-title {
+        min-width: 256px; /* Set a minimum width for navigation bar items */
+    }
+
+    /* Prevent resizing of elements */
+    .container {
+        min-width: 965px; /* Set a minimum width for the container */
+    }
+}
