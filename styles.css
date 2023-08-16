@@ -3,12 +3,24 @@ body {
   margin-top: 10px;
   padding: 20px;
   box-sizing: border-box;
-  font-family: 'Gill Sans', sans-serif;
+  font-family: Lato, sans-serif;
+}
+
+.caption {
+    font-size: 16px;
+    font-family: Amiri;
+}
+
+.text-footer {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Lato;
+    margin-bottom: -10px;
+    text-align: center;
 }
 
 .navbar {
     display: flex;
-    margin-bottom: 50px
 }
 
 .nav-home {
@@ -35,7 +47,7 @@ body {
 .nav-home a {
     text-decoration: none;
     color: white;
-    font-family: "Gill Sans", sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 24px;
 }
@@ -43,7 +55,7 @@ body {
 .nav-projects a {
     text-decoration: none;
     color: black;
-    font-family: "Gill Sans", sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 24px;
 }
@@ -51,7 +63,7 @@ body {
 .nav-title a {
     text-decoration: none;
     color: white;
-    font-family: "Gill Sans", sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 24px;
 }
@@ -64,31 +76,25 @@ body {
     color: white;
 }
 
-.image.container {
+.image-container {
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 .image-container img {
-  width: 100px; /* Set the desired width */
-  height: auto; /* Maintain the aspect ratio */
-  margin-right: 10px; /* Add some spacing between the image and text */
+  margin-left: auto;
+  max-width: 100%;
 }
 
-.image-container p {
-  margin: 0; /* Remove any default margin on the paragraph */
-}
-
-.content {
-    text-align: left;
-    background-color: white;
-    color: black;
-}
-
-.body-text {
-    font-size: 24px;
+.text-heading {
+    font-size: 36px;
     font-weight: bold;
-    margin-bottom: 20px;
+}
+
+.text-body {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: justify;
 }
 
 .links {
@@ -112,38 +118,3 @@ body {
     background-color: black;
     color: white;
 }
-
-@media (max-width: 1080px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-home {
-        flex: none;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .nav-projects {
-        flex: none;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .nav-title {
-        flex: none;
-        text-align: center;
-        width: 102.5%;
-    }
-    
-    .link {
-        margin-right: 0;
-    }
-    
-    .body-text {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: left;
-    }

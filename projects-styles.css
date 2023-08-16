@@ -9,6 +9,23 @@ body {
     font-size: 18px;
 }
 
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('/fonts/GillSans.ttc') format('ttc'),
+}
+
+@font-face {
+  font-family: 'Iowan Old Style';
+  src: url('/fonts/IowanOldStyle.ttc') format('ttc'),
+}
+
+.text-footer {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Gill Sans';
+    margin-bottom: -10px;
+}
+
 .navbar {
     display: flex;
     margin-bottom: 50px;
@@ -85,9 +102,17 @@ body {
 }
 
 .text-column {
-  flex: 1;
-  padding: 20px;
-  box-sizing: border-box;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.caption {
+    font-size: 16px;
+    font-style: italic;
+    margin-top: -15px;
+    margin-bottom: 25px;
 }
 
 .keywords {
@@ -106,6 +131,7 @@ body {
     font-family: Gill Sans;
     font-weight: Bold;
     text-transform: uppercase;
+    font-size: 16px;
 }
 
 .image-column {
@@ -121,37 +147,3 @@ img {
   margin-bottom: 20px;
 }
 
-@media (max-width: 1080px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-home {
-        flex: none;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .nav-projects {
-        flex: none;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .nav-title {
-        flex: none;
-        text-align: center;
-        width: 102.5%;
-    }
-
-    .container {
-        flex-direction: column;
-        align-items: center;
-        margin-left: -17px;
-        margin-right: -10px;
-    }
-    
-    .image-column {
-        width: 95%;
-    }

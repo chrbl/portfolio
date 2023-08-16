@@ -4,6 +4,16 @@ body {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('/fonts/GillSans.ttc') format('ttc'),
+}
+
+@font-face {
+  font-family: 'Iowan Old Style';
+  src: url('/fonts/IowanOldStyle.ttc') format('ttc'),
+}
+
 .navbar {
     display: flex;
     margin-bottom: 50px
@@ -112,31 +122,3 @@ body {
   display: flex;
   opacity: 1;
 }
-
-@media (max-width: 1080px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-home {
-        flex: none;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .nav-projects {
-        flex: none;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .nav-title {
-        flex: none;
-        text-align: center;
-        width: 102.5%;
-    }
-
-    .gallery {
-        display: flex;
-    }
