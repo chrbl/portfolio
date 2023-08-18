@@ -26,7 +26,7 @@ footer {
     display: grid; /* Use grid layout for columns and rows */
     grid-template-columns: 1fr 1fr 1fr; /* Equal columns for signature, copyright, and contact */
     align-items: center;
-    height: 4%;
+    height: 50px;
 }
 
 .signature {
@@ -43,7 +43,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     position: relative;
-    top: 0px;
+    top: 1px;
     padding-right: 45px;
 }
 

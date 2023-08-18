@@ -22,7 +22,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 4%;
+    height: 50px;
     background-color: black;
     display: grid; /* Use grid layout for columns and rows */
     grid-template-columns: 1fr 1fr 1fr; /* Equal columns for signature, copyright, and contact */
