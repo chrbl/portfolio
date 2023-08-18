@@ -14,6 +14,7 @@ body {
     color: black;
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
+    font-weight: 700;
 }
 
 /* Footer */
@@ -34,6 +35,7 @@ footer {
     text-align: left;
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     color: white;
     margin-left: 23px;
 }
@@ -92,6 +94,7 @@ footer {
 .nav-title a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     font-size: 24px;
 }
 
@@ -111,6 +114,7 @@ footer {
 .image-column {
   display: flex;
   flex-direction: column;
+  margin-bottom: 128px;
 }
 
 .image-container {
@@ -137,10 +141,23 @@ footer {
     justify-content: center;
     opacity: 0;
     color: white;
-    font-size: 18px;
-    font-family: Gill Sans;
-    font-weight: Bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     text-align: center;
+    flex-direction: column; /* Add this line */
+}
+
+.hover-box p {
+    margin: 0;
+    padding: 5px;
+}
+
+.hover-box .additional-text {
+    font-size: 8px; /* Adjust the font size as desired */
+    font-family: 'Martian Mono', monospace; /* Apply a different font */
+    margin-top: 10px; /* Add some spacing between the two lines of text */
+    text-align: justify;
+    padding: 25px;
 }
 
 .link {
