@@ -128,7 +128,7 @@ body {
     margin-block: 5px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: 1px;
 }
 
@@ -145,6 +145,10 @@ img {
     margin-bottom: 20px;
 }
 
+.date {
+    letter-spacing: 2.35px;
+}
+
 /* Media query for viewport widths below 1080px */
 @media screen and (max-width: 1080px) {
     /* Prevent resizing of navigation bar */
@@ -158,6 +162,7 @@ img {
     .nav-projects {
         flex-basis: 37%; /* Make nav-home and nav-projects occupy 37% width each */
         margin-left: 0px;
+        padding: 5px;
     }
 
     .nav-title {
@@ -189,5 +194,9 @@ img {
     .container .text-column,
     .container .image-column {
         padding: 0; /* Reset padding inside container */
+    }
+    
+    .copyright {
+        margin-left: -20px;
     }
 }
