@@ -1,80 +1,108 @@
+/* Global Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
 body {
-  margin: 30px;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
 }
 
-@font-face {
-  font-family: 'Gill Sans';
-  src: url('/fonts/GillSans.ttc') format('ttc'),
+/* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    display: grid; /* Use grid layout for columns and rows */
+    grid-template-columns: 1fr 1fr 1fr; /* Equal columns for signature, copyright, and contact */
+    align-items: center;
+    height: 4%;
 }
 
-@font-face {
-  font-family: 'Iowan Old Style';
-  src: url('/fonts/IowanOldStyle.ttc') format('ttc'),
+.signature {
+    grid-column: 1;
+    text-align: left;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-left: 23px;
 }
 
+.contact {
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 0px;
+    padding-right: 45px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: -15px;
+}
+
+/* Navigation Bar */
 .navbar {
     display: flex;
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
 .nav-home {
     flex: 1;
     text-align: center;
-    padding: 40px;
     background-color: white;
-}
-
-.nav-projects {
-    flex: 1;
-    text-align: center;
-    padding: 40px;
-    background-color: black;
+    color: black;
+    height: 64px;
+    line-height: 64px;
 }
 
 .nav-title {
     flex: 1;
-    text-align: center;
-    padding: 40px;
-    background-color: white;
+}
+
+.nav-projects {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: black;
+    color: white;
+    height: 64px;
+    line-height: 64px;
+}
+
+.nav-home a,
+.nav-projects a,
+.nav-title a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
 }
 
 .nav-home a {
-    text-decoration: none;
     color: black;
-    font-family: "Gill Sans", sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.nav-projects a {
-    text-decoration: none;
-    color: white;
-    font-family: "Gill Sans", sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.nav-title a {
-    text-decoration: none;
-    color: white;
-    font-family: "Gill Sans", sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.nav-home:hover {
-    background-color: black;
-}
-
-.nav-home:hover a {
-    color: white;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 100px;
 }
 
 .empty-column {
@@ -98,20 +126,21 @@ body {
 }
 
 .hover-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  color: white;
-  font-size: 18px;
-  font-family: Gill Sans;
-  font-weight: Bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    font-family: Gill Sans;
+    font-weight: Bold;
+    text-align: center;
 }
 
 .link {
@@ -119,6 +148,27 @@ body {
 }
 
 .image-container:hover .hover-box {
-  display: flex;
-  opacity: 1;
+    display: flex;
+    opacity: 1;
+}
+
+/* Media query for viewport widths below 1080px */
+@media screen and (max-width: 1080px) {
+    .nav-title {
+    display: none;
+    }
+    
+    .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+    
+    .empty-column {
+    display: none;
+    }
+    
+    .signature {
+    margin-left: 30px;
+    grid-column: 1 / span 2;
+    }
 }

@@ -1,120 +1,208 @@
+/* Global Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
 body {
-  margin: 10px;
-  margin-top: 10px;
-  padding: 20px;
-  box-sizing: border-box;
-  font-family: Lato, sans-serif;
+    margin: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
 }
 
-.caption {
-    font-size: 16px;
-    font-family: Amiri;
+/* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4%;
+    background-color: black;
+    display: grid; /* Use grid layout for columns and rows */
+    grid-template-columns: 1fr 1fr 1fr; /* Equal columns for signature, copyright, and contact */
+    align-items: center;
 }
 
-.text-footer {
-    font-size: 12px;
-    font-weight: bold;
-    font-family: Lato;
-    margin-bottom: -10px;
-    text-align: center;
+.signature {
+    grid-column: 1;
+    text-align: left;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-left: 23px;
 }
 
+.contact {
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 10px;
+    padding-right: 45px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: -15px;
+}
+
+/* Navigation Bar */
 .navbar {
     display: flex;
-}
-
-.nav-home {
-    flex: 1;
-    text-align: center;
-    padding: 40px;
-    background-color: black;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: 25px;
 }
 
 .nav-projects {
     flex: 1;
     text-align: center;
-    padding: 40px;
     background-color: white;
+    color: black;
+    height: 64px;
+    line-height: 64px;
+}
+
+.nav-home {
+    flex: 1;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 64px;
+    line-height: 64px;
 }
 
 .nav-title {
     flex: 1;
-    text-align: center;
-    padding: 40px;
-    background-color: white;
 }
-
-.nav-home a {
+.nav-home a,
+.nav-projects a {
     text-decoration: none;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
 }
 
 .nav-projects a {
-    text-decoration: none;
     color: black;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
+}
+
+/* Content Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.introduction-conclusion-copyright {
+    grid-column: 1;
+    margin-right: 25px;
+}
+
+.introduction,
+.conclusion,
+.copyright {
+    display: none;   
+}
+
+.profile-photo {
+    grid-column: 2;
+    width: 100%;
+    position: relative;
+}
+
+.heading {
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
 }
 
-.nav-title a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.nav-projects:hover {
-    background-color: black;
-}
-
-.nav-projects:hover a {
-    color: white;
-}
-
-.image-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.image-container img {
-  margin-left: auto;
-  max-width: 100%;
-}
-
-.text-heading {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.text-body {
+.body {
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    font-weight: bold;
-    text-align: justify;
 }
 
-.links {
-    display: flex;
-    flex-direction: column;
+.caption {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    letter-spacing: 0.33px;
 }
 
-.link {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    margin: 5px 0;
-    background-color: white;
+a img {
+    max-width: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.fine-print {
     color: black;
-    padding: 10px;
-    margin-right: 66.6%;
+    text-align: left;
+    font-size: 8px;
+    font-family: 'Martian Mono', monospace;
+    letter-spacing: 0.33px;
 }
 
-.link:hover {
-    background-color: black;
-    color: white;
+/* Media query for viewport widths below 1080px */
+@media screen and (max-width: 1080px) {
+    .body {
+        font-size: 18px;
+    }
+    
+    .nav-title {
+    display: none;
+    }
+    
+    .introduction-conclusion-copyright {
+        display: none;
+    }
+
+    .introduction {
+        display: grid;
+        grid-column: 1 / span 3;
+        text-align: justify;
+    }
+    
+    .profile-photo {
+        display: grid;
+        grid-column: 1 / span 3;
+        width: 100%;
+    }
+    
+    .conclusion {
+        display: grid;
+        grid-column: 1 / span 3;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+
+    .copyright {
+        display: grid;
+        grid-column: 1 / span 3;
+        text-align: justify;
+        margin-bottom: 72px;
+    }
+    
+    .caption {
+        margin-bottom: 0px;
+    }
+    
+    .signature {
+    margin-left: 30px;
+    grid-column: 1 / span 2;
+    }
+    
 }

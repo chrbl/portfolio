@@ -16,12 +16,13 @@ body {
     font-size: 20px;
 }
 
-/* Copyright */
+/* Footer */
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 4%;
     background-color: black;
     display: grid; /* Use grid layout for columns and rows */
     grid-template-columns: 1fr 1fr 1fr; /* Equal columns for signature, copyright, and contact */
@@ -65,10 +66,9 @@ footer {
 .nav-home,
 .nav-projects {
     flex: 1;
-    text-align: left;
+    text-align: center;
     background-color: white;
     color: black;
-    margin-left: -7.25px;
     height: 64px;
     line-height: 64px;
 }
@@ -78,7 +78,7 @@ footer {
     display: flex; /* Use flex display to center content vertically and horizontally */
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
-    text-align: left;
+    text-align: center;
     background-color: black;
     color: white;
     height: 144px;
@@ -179,13 +179,13 @@ a img {
     .nav-projects {
         flex-basis: 37%; /* Make nav-home and nav-projects occupy 37% width each */
         margin-left: 0px;
-        text-align: right;
+        text-align: center;
     }
 
     .nav-home {
         flex-basis: 37%; /* Make nav-home and nav-projects occupy 37% width each */
         margin-left: 0px;
-        text-align: left;
+        text-align: center;
     }
     
     .nav-title {
@@ -224,12 +224,5 @@ a img {
     .signature {
     margin-left: 30px;
     grid-column: 1 / span 2;
-    }
-    
-    /* Add extra margin to the bottom for Apple devices without a home button */
-    @supports(padding: max(0px)) {
-        body {
-            margin-bottom: max(20px, env(safe-area-inset-bottom)); /* Apply the safe area inset as bottom margin */
-        }
     }
 }
