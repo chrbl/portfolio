@@ -99,6 +99,7 @@ body {
 .text-column {
     flex: 1;
     padding: 20px;
+    margin-left: -27px;
     box-sizing: border-box;
     text-align: justify;
 }
@@ -132,7 +133,7 @@ body {
 }
 
 .image-column {
-    flex: 2.18;
+    flex: 1.95;
     overflow: auto;
     box-sizing: border-box;
 }
@@ -148,17 +149,45 @@ img {
 @media screen and (max-width: 1080px) {
     /* Prevent resizing of navigation bar */
     .navbar {
-        min-width: 960px; /* Set a minimum width for the navigation bar */
-    }
-    
-    .nav-home,
-    .nav-projects,
-    .nav-title {
-        min-width: 256px; /* Set a minimum width for navigation bar items */
+        min-width: 100%; /* Remove the minimum width for the navigation bar */
+        flex-wrap: wrap; /* Allow navigation items to wrap to the next line */
     }
 
-    /* Prevent resizing of elements */
+    /* Set width and alignment for navigation bar items */
+    .nav-home,
+    .nav-projects {
+        flex-basis: 37%; /* Make nav-home and nav-projects occupy 37% width each */
+        margin-left: 0px;
+    }
+
+    .nav-title {
+        flex-basis: 100%; /* Make nav-title occupy full width on its own line */
+    }
+    
     .container {
-        min-width: 965px; /* Set a minimum width for the container */
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    /* Adjust styling for text-column and image-column */
+    .text-column {
+        flex-basis: 100%; /* Make both columns occupy full width on their own lines */
+        padding: 10px; /* Adjust padding for better spacing */
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+    
+    .keywords {
+        margin-top: 10px;
+    }
+    
+    .image-column {
+        flex-basis: 100%; /* Make both columns occupy full width on their own lines */
+        padding: 10px; /* Adjust padding for better spacing */
+    }
+
+    /* Reset padding for text-column and image-column inside container */
+    .container .text-column,
+    .container .image-column {
+        padding: 0; /* Reset padding inside container */
     }
 }
