@@ -11,10 +11,6 @@ body {
     padding: 20px;
     height: 100vh;
     background-color: white;
-    color: black;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 700;
 }
 
 /* Footer */
@@ -106,8 +102,9 @@ footer {
 }
 
 .introduction-conclusion-copyright {
-    grid-column: 1;
+    grid-column: 1 / span 1;
     margin-right: 25px;
+    text-align: justify;
 }
 
 .introduction,
@@ -126,22 +123,23 @@ footer {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 900;
-    text-align: justify;
 }
 
 .body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
     font-weight: 700;
-    text-align: justify;
 }
 
 .caption {
-    font-size: 18px;
-    font-style: italic;
-    margin-top: -10px;
-    margin-bottom: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: -20px;
+    padding: 5px;
     letter-spacing: 0.33px;
+    background-color: black;
+    color: white;
 }
 
 a img {
@@ -157,7 +155,6 @@ img {
 
 .fine-print {
     color: black;
-    text-align: left;
     font-size: 8px;
     font-family: 'Martian Mono', monospace;
     letter-spacing: 0.33px;
@@ -167,6 +164,12 @@ img {
 @media screen and (max-width: 1080px) {
     .body {
         font-size: 18px;
+        background-color: white;
+    }
+    
+    .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     }
     
     .nav-title {
@@ -179,26 +182,27 @@ img {
 
     .introduction {
         display: grid;
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 6;
         text-align: justify;
     }
     
     .profile-photo {
         display: grid;
-        grid-column: 1 / span 3;
+        grid-column: 3 / span 4;
         width: 100%;
     }
     
     .conclusion {
         display: grid;
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 2;
         text-align: justify;
         margin-bottom: 30px;
+        margin-top: 25px;
     }
 
     .copyright {
         display: grid;
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 6;
         text-align: justify;
         margin-bottom: 72px;
     }
