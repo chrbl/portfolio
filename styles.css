@@ -194,7 +194,7 @@ img {
     
     .conclusion {
         display: grid;
-        grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
         text-align: justify;
         margin-bottom: 30px;
         margin-top: 25px;
