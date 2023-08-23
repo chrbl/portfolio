@@ -217,3 +217,66 @@ img {
     }
     
 }
+
+/* Media query for viewport widths below 512px */
+@media screen and (max-width: 512px) {
+    .body {
+        background-color: white;
+        font-size: 20px;
+    }
+    
+    .heading {
+        font-size: 20px;
+    }
+    
+    .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .nav-title {
+    display: none;
+    }
+    
+    .introduction-conclusion-copyright {
+        display: none;
+    }
+
+    .introduction {
+        display: grid;
+        text-align: justify;
+        font-size: 12px;
+        grid-column: 1 / span 3;
+    }
+    
+    .profile-photo {
+        display: grid;
+        grid-column: 2 / span 2;
+        width: 100%;
+    }
+    
+    .conclusion {
+        display: grid;
+        grid-column: 1 / span 3;
+        text-align: justify;
+        margin-bottom: 30px;
+        margin-top: 25px;
+    }
+
+    .copyright {
+        display: grid;
+        grid-column: 1 / span 3;
+        text-align: justify;
+        margin-bottom: 72px;
+    }
+    
+    .caption {
+        margin-bottom: 0px;
+    }
+    
+    .signature {
+    margin-left: 30px;
+    grid-column: 1 / span 2;
+    }
+    
+}

@@ -124,12 +124,15 @@ footer {
 }
 
 .caption {
-    font-size: 18px;
+    font-size: 14px;
     font-style: italic;
-    margin-top: -10px;
-    margin-bottom: 30px;
+    margin-top: -20px;
+    margin-bottom: 25px;
     letter-spacing: 0.33px;
     font-weight: 700;
+    background-color: black;
+    color: white;
+    padding: 5px;
 }
 
 .keywords {
