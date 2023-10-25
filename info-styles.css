@@ -1,0 +1,281 @@
+/* Global Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    margin: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    height: 100vh;
+    background-color: white;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    display: grid; /* Use grid layout for columns and rows */
+    grid-template-columns: 1fr 1fr 1fr; /* Equal columns for signature, copyright, and contact */
+    align-items: center;
+    height: 50px;
+}
+
+.signature {
+    grid-column: 1;
+    text-align: left;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin-left: 23px;
+}
+
+.contact {
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 10px;
+    padding-right: 45px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: -15px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: 25px;
+}
+
+.nav-projects {
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    color: black;
+    height: 64px;
+    line-height: 64px;
+}
+
+.nav-home {
+    flex: 1;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 64px;
+    line-height: 64px;
+}
+
+.nav-title {
+    flex: 1;
+}
+.nav-home a,
+.nav-projects a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.nav-projects a {
+    color: black;
+}
+
+/* Content Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.introduction-conclusion-copyright {
+    grid-column: 1 / span 1;
+    margin-right: 25px;
+    text-align: justify;
+}
+
+.introduction,
+.conclusion,
+.copyright {
+    display: none;   
+}
+
+.profile-photo {
+    grid-column: 2;
+    width: 100%;
+    position: relative;
+}
+
+.heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.caption {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: -20px;
+    padding: 5px;
+    letter-spacing: 0.33px;
+    background-color: black;
+    color: white;
+}
+
+a img {
+    max-width: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.fine-print {
+    color: black;
+    font-size: 8px;
+    font-family: 'Martian Mono', monospace;
+    letter-spacing: 0.33px;
+}
+
+/* Media query for viewport widths below 1080px */
+@media screen and (max-width: 1080px) {
+    .body {
+        font-size: 18px;
+        background-color: white;
+    }
+    
+    .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .nav-title {
+    display: none;
+    }
+    
+    .introduction-conclusion-copyright {
+        display: none;
+    }
+
+    .introduction {
+        display: grid;
+        grid-column: 1 / span 6;
+        text-align: justify;
+    }
+    
+    .profile-photo {
+        display: grid;
+        grid-column: 3 / span 4;
+        width: 100%;
+    }
+    
+    .conclusion {
+        display: grid;
+        grid-column: 1 / span 3;
+        text-align: justify;
+        margin-bottom: 30px;
+        margin-top: 25px;
+    }
+
+    .copyright {
+        display: grid;
+        grid-column: 1 / span 6;
+        text-align: justify;
+        margin-bottom: 72px;
+    }
+    
+    .caption {
+        margin-bottom: 0px;
+    }
+    
+    .signature {
+    margin-left: 30px;
+    grid-column: 1 / span 2;
+    }
+    
+}
+
+/* Media query for viewport widths below 512px */
+@media screen and (max-width: 512px) {
+    .body {
+        background-color: white;
+        font-size: 18px;
+    }
+    
+    .heading {
+        font-size: 18px;
+    }
+    
+    .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .nav-title {
+    display: none;
+    }
+    
+    .introduction-conclusion-copyright {
+        display: none;
+    }
+
+    .introduction {
+        display: grid;
+        text-align: justify;
+        grid-column: 1 / span 3;
+    }
+    
+    .profile-photo {
+        display: grid;
+        grid-column: 2 / span 2;
+        width: 100%;
+    }
+    
+    .conclusion {
+        display: grid;
+        grid-column: 1 / span 3;
+        text-align: justify;
+        margin-bottom: 30px;
+        margin-top: 25px;
+    }
+
+    .copyright {
+        display: grid;
+        grid-column: 1 / span 3;
+        text-align: justify;
+        margin-bottom: 72px;
+    }
+    
+    .caption {
+        margin-bottom: 0px;
+    }
+    
+    .signature {
+    margin-left: 30px;
+    grid-column: 1 / span 2;
+    }
+    
+}
